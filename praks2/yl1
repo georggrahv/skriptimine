@@ -1,0 +1,5 @@
+#!/bin/bash
+# Väljastab tervituse kujul "Tere, kasutajanimi!"
+echo -n "Tere, "
+echo -n `whoami`
+echo "!"
