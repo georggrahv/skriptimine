@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -n "Sisestage ainepunktide arv: "
+read ainepunktide_arv
+echo -n "Sisestage nädalate arv: "
+read nadalate_arv
+ajakulu=`echo "scale=1;$ainepunktide_arv/$nadalate_arv" | bc`
+ajakulu_umardatud="`echo "($ajakulu+0.9)/1" | bc`"
+echo $ajakulu_umardatud
