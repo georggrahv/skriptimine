@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Skript väljastab kuupäeva ja kellaaja
+
+paev=`date +"%A"`
+kuu=`date +"%B"`
+paevanr=`date +"%d"`
+aasta=`date +"%Y"`
+kellaaeg=`date +"%R"`
+echo ""
+echo "Today is $paev, $kuu $paevanr, $aasta"
+echo ""
+echo "Time is $kellaaeg"
+echo ""
+echo -n "Calender of"
+cal
