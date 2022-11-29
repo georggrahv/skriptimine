@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Tagastab kasutajale tervituse kellaaja kohta
+
+aeg=`date "+%H"`
+kasutaja=`whoami`
+
+# Kui aeg on 6 ja 12 vahel
+if [ $aeg -ge 6 -a $aeg -lt 12 ]
+then
+        echo "Tere hommikust, $kasutaja!"
+
+# Kui aeg on 12 ja 18 vahel
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]
+then
+        echo "Tere päevast, $kasutaja!"
+
+# Kui aeg on 18 ja 22 vahel
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]
+then
+        echo "Tere õhtust, $kasutaja!"
+
+# Kui aeg on 22 ja 24 vahel või 0 ja 6 vahel
+elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]
+then
+        echo "Head ööd, $kasutaja!"
+
+# Kui sisestatud arv ei ei ole 0 ja 24 vahel (24 välja arvatud)
+else
+        echo "Vale sisend"
+fi
+
