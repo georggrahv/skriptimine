@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Busside arvutamise skript
+
+echo -n "Sisesta reisijate arv: "
+read reisijate_arv
+echo -n "Sisesta kohtade arv bussis: "
+read kohtade_arv
+
+bussid=$(($reisijate_arv / $kohtade_arv))
+echo "Täielikult täidetud busse on $bussid."
+
+maha_jaanud=$(($reisijate_arv % $kohtade_arv))
+echo "Maha jääb $maha_jaanud inimest."
